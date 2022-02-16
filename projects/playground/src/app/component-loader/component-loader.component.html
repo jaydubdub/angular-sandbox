@@ -1,0 +1,7 @@
+<div class="component-loader">
+    <div loaderTarget class="component-loader-inner">
+        <!-- Component loaded here -->
+        <button mat-button (click)="loadDynamicComponent()" *ngIf="!componentInstance">Load Dynamic Component</button>
+        <button mat-button (click)="destroyComponent()" *ngIf="componentInstance">Destroy Dynamic Component</button>
+    </div>
+</div>

@@ -1,5 +1,6 @@
 <div class="app-container">
 	<h3>Roles</h3>
+	<p>Users roles are pulled via property decorator instead of manual dependency injection</p>
 	<ul>
 		<li *ngFor="let role of userRoles">{{ role }}</li>
 	</ul>
@@ -10,7 +11,13 @@
 
 	<h3>Restricted Confirmable Action</h3>
 	<p>Action is restricted to 'super-admin' role.  Confirmation will not execute.</p>
-	<button color="primary" mat-button (click)="confirmInvalid($event)">Confirm it!</button>
+	<button color="primary" mat-button (click)="confirmInvalid()">Confirm it!</button>
+	<p><small>Check console for error message.</small></p>
+
+	<button color="primary" mat-button (click)="confirmRestricted()">This one works.</button>
+	<p><small>Action permitted because role requirements are met.</small></p>
 	
-	<router-outlet></router-outlet>
+	<h3>Lazy Loaded Dynamic Component</h3>
+	<p>Load a SCAM pattern component via lazy loading by clicking the button below.</p>
+	<ng-pg-component-loader></ng-pg-component-loader>
 </div>

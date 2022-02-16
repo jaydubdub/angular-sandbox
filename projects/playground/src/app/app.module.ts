@@ -10,7 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RolesModule } from 'projects/roles/src/lib/roles.module';
-import { RolesService } from 'projects/roles/src/lib/roles.service';
+import { ComponentLoaderModule } from './component-loader/component-loader.module';
 
 @NgModule({
   declarations: [
@@ -25,11 +25,10 @@ import { RolesService } from 'projects/roles/src/lib/roles.service';
     MatButtonModule,
     MatCardModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    ComponentLoaderModule
   ],
-  providers: [
-    RolesService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

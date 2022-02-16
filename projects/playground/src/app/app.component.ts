@@ -27,10 +27,6 @@ export class AppComponent {
     return true;
   }
 
-  public confirmInvalid(event: Event): void {
-    this.onConfirmInvalid();
-  }
-
   @RestrictRole(['super-admin'])
   @Confirmable({
     data: {
@@ -39,7 +35,21 @@ export class AppComponent {
       confirmBtnText: 'YUP!'
     }
   })
-  private onConfirmInvalid(): boolean {
+  public confirmInvalid(): boolean {
+    // Demo user will never get this far due to role restrictions
+    return true;
+  }
+
+  @RestrictRole(['admin'])
+  @Confirmable({
+    data: {
+      title: 'Are you sure you want to do that?',
+      message: 'You might not like the result.',
+      confirmBtnText: 'YUP!'
+    }
+  })
+  public confirmRestricted(): boolean {
+    console.log(`The action was confirmed!`);
     return true;
   }
 }
