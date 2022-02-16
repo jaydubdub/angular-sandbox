@@ -1,0 +1,7 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/roles",
+  "lib": {
+    "entryFile": "src/projects/roles/src/public-api.ts"
+  }
+}

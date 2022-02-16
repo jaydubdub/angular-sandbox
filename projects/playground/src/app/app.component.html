@@ -1,0 +1,16 @@
+<div class="app-container">
+	<h3>Roles</h3>
+	<ul>
+		<li *ngFor="let role of userRoles">{{ role }}</li>
+	</ul>
+
+	<h3>Confirmable Action</h3>
+	<p>Displays confirmation dialog on click event using material modal</p>
+	<button color="primary" mat-button (click)="confirm($event)">Confirm it!</button>
+
+	<h3>Restricted Confirmable Action</h3>
+	<p>Action is restricted to 'super-admin' role.  Confirmation will not execute.</p>
+	<button color="primary" mat-button (click)="confirmInvalid($event)">Confirm it!</button>
+	
+	<router-outlet></router-outlet>
+</div>

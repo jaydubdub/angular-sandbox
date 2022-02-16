@@ -1,0 +1,11 @@
+.app-container {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 900px;
+
+    button {
+        width: 15rem;
+    }
+}
